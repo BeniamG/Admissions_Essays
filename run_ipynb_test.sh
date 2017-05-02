@@ -14,6 +14,8 @@ scriptname="$(basename $notebook .ipynb)".py
 #This creates the variable to be passed to the new file name
 date=$(date +%Y-%m-%d_at_%H-%M)
 
+date_name=$date'-'$scriptname
+
 #this uses nbconvert, a Jupyter library, to create a .py and run it in python3
 jupyter nbconvert --to script --execute ${notebook} && python3 ${scriptname}
 
@@ -22,4 +24,4 @@ mv ${scriptname} ../data/scratch_dir/
 
 
 #This renames the folder for future reference
-mv ../data/scratch_dir ../data/$date
+mv ../data/scratch_dir ../data/$date_name
