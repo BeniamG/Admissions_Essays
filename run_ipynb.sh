@@ -14,7 +14,7 @@ scriptname="$(basename $notebook .ipynb)".py
 #This creates the variable to be passed to the new file name
 date=$(date +%Y-%m-%d_at_%H-%M)
 
-date_name=$date'-'$scriptname
+date_name=$scriptname'-'$date
 
 #this uses nbconvert, a Jupyter library, to create a .py and run it in python3
 jupyter nbconvert --to script --execute ${notebook} && python3 ${scriptname}
