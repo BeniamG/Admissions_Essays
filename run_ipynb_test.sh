@@ -18,7 +18,7 @@ date=$(date +%Y-%m-%d_at_%H-%M)
 jupyter nbconvert --to script --execute ${notebook} && python3 ${scriptname}
 
 #this moves the .py to the data archive folder for future reproduceability
-mv ${scriptname} ../data/scratch_dir/$date_$scriptname
+mv ${scriptname} ../data/scratch_dir/
 
 
 #This renames the folder for future reference
