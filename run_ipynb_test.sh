@@ -20,8 +20,7 @@ date_name=$date'-'$scriptname
 jupyter nbconvert --to script --execute ${notebook} && python3 ${scriptname}
 
 #this moves the .py to the data archive folder for future reproduceability
-mv ${scriptname} ../data/scratch_dir/
-
+mv ${scriptname} ../data/scratch_dir/$date_name
 
 #This renames the folder for future reference
-mv ../data/scratch_dir ../data/$date_name
+mv ../data/scratch_dir ../data/$date
