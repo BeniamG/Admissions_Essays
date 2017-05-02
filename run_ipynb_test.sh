@@ -15,7 +15,7 @@ scriptname="$(basename $notebook .ipynb)".py
 jupyter nbconvert --to script --execute ${notebook} && python3 ${scriptname}
 
 #this moves the .py to the data archive folder for future reproduceability
-mv ${scriptname} ../data/scratch_dir/${scriptname}
+mv ${scriptname} ../data/scratch_dir/$scriptname
 
 #This creates the variable to be passed to the new file name
 date=$(date +%Y-%m-%d_at_%H-%M)
