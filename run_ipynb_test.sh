@@ -10,4 +10,4 @@ notebook=$1
 scriptname="$(basename $notebook .ipynb)".py
 
 jupyter nbconvert --to script --execute ${notebook} && python3 ${scriptname}
-rm ${scriptname}
+mv ${scriptname} ../data/scratch_dir
