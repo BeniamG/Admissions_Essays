@@ -18,6 +18,6 @@ jupyter nbconvert --to script --execute ${notebook} && python3 ${scriptname}
 mv ${scriptname} ../data/scratch_dir
 
 #This creates the variable to be passed to the new file name
-date=$`date +%Y-%m-%d_at_%H-%M`
+date=$(date +%Y-%m-%d_at_%H-%M)
 #This renames the folder for future reference
 mv ../data/scratch_dir ../data/$date
